@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #F6F6F4;
+}
+
+.containerLogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.containerLogo > h1 {
+    font-size: clamp(1rem, 0.8rem + 1vw, 1.5rem); /*20px*/
+    font-family: 'Nunito', 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.formLoginTitle {
+    height: 25%;
+    margin-bottom: 0;
+    font-size: clamp(1.5rem, 1.1rem + 2vw, 2.25rem); /*30px*/
+    font-family: 'Nunito', 'Times New Roman', Times, serif;
+    text-align: center;
+    color: #32A041;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formLogin {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inputsLabelUni {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.inputLabelUni {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+}
+
+.inputLabelUni > label {
+    font-size: clamp(1.2rem, 1rem + 0.6vw, 1.6rem); /*1.3rem*/
+    font-family: 'Nunito', 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.containerPasswordButton {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.containerPasswordButton > button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.inputLabelUni input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #888888;
+    border-radius: 5px;
+    font-size: clamp(1.2rem, 1rem + 0.6vw, 1.6rem); /*1.3rem*/
+}
+
+.inputLabelUni input#inputPassword {
+    width: calc(100% - 40px);
+}
+
+.inputLabelUni input:focus {
+    border: 1px solid #000000;
+    outline: none;
+}
+
+.inputsSubmitReset {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.inputsSubmitReset > input {
+    width: 50%;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 10px;
+    font-size: clamp(0.9rem, 1rem + 0.6vw, 1.2rem); /*1rem*/
+    font-family: 'Nunito', 'Times New Roman', Times, serif;
+    font-weight: bold;
+    cursor: pointer;
+    color: #FFFFFF;
+}
+
+.inputsSubmitReset > input[type='submit'] {
+    background-color: #32A041;
+}
+
+.inputsSubmitReset > input[type='reset'] {
+    background-color: #C8191E;
+}
+
+@media(min-width: 760px) {
+    .formLogin {
+        width: 75%;
+    }
+
+    .inputsSubmitReset > input {
+        width: 25%;
+    }
+
+    .inputsSubmitReset {
+        justify-content: space-around;
+    }
+}
+
+@media(max-height: 600px) {
+    .inputsLabelUni {
+        margin-bottom: 2.8rem;
+    }
+}
